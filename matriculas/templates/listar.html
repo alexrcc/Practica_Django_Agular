@@ -1,0 +1,68 @@
+{% extends 'master.html' %}
+{% block contenido %}
+				
+				{% if alumnos %}
+
+					<div class='alert alert-success'>Alumnos Registrados</div>
+					<table class="table table-bordered table-hover">
+					<tr>
+						<th>Cedula</th>
+						<th>Apellidos</th>
+						<th>Nombres</th>
+					</tr>
+					{% for c in alumnos %}
+					<tr>
+						<td> {{c.cedula}} </td>
+						<td>{{c.apellidos}}</td>
+						<td>{{c.nombres}}</td>
+					</tr>
+					{% endfor %}
+					</table>
+				{%else%}
+					<div class="alert alert-success">
+						<p><strong>No hay Alumnos registrado</strong></p>
+
+					</div>
+					
+				{%endif%}
+					<button onClick="location.href = 'crearAlumno'" type="button" class="btn btn-primary" aria-label="Left Align">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"> Alumno</span>
+				  
+				</button>
+				<br>
+
+				{% if materias %}
+
+					<div class='alert alert-success'>Materias Registradas</div>
+					<table class="table table-bordered table-hover">
+					<tr>
+						<th>Nombre</th>
+						<th>Cupos</th>
+					
+					</tr>
+					{% for c in materias %}
+					<tr>
+						<td> {{c.nombreMateria}} </td>
+						<td>{{c.cupos}}</td>
+					</tr>
+					{% endfor %}
+					</table>
+				{%else%}
+					<div class="alert alert-success">
+						<p><strong>No hay Materias registrado</strong></p>
+
+					</div>
+					
+				{%endif%}
+
+
+
+
+				{{titulo}}
+
+				<button onClick="location.href = 'crearMateria'" type="button" class="btn btn-primary" aria-label="Left Align">
+				  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true">Materia</span>
+				  
+				</button>
+			</p>
+{% endblock contenido %}

@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+{% block contenido %}
+	<a href="/inicio" class="btn btn-primary" style="float:right;" aria-hidden="true">  REGRESAR</a>
+		<br>
+			<p class="text-center">
+				
+					<center><h1>Crear Materia</h1>
+			</p>
+		
+		
+			<form class="form-horizontal" action="" method="POST">{% csrf_token %}
+		<div class="form-group">
+		{{form.as_p}}
+		<div>
+			<input type="submit" value="Aceptar" class="btn btn-primary"></input>
+		</form>
+		</center>
+{% endblock contenido%}

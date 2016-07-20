@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html  lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica 9</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="angular/angular.min.js"></script>
+		<script src="angular/angular-resource.min.js"></script>
+		<script src="js/repaso.js"></script>
+
+	</head>
+	<body ng-app="app">
+	<div ng-controller="controlador">
+	<form ng-submit="ingresar()">
+        <input type="text" name="cedula" ng-model="cedulaEntrada" placeholder="Cedula">
+        <input type="submit" value="Ingresar">
+    </form>
+    {{mensaje}}
+    
+
+	</div>
+	</body>
+</html>
